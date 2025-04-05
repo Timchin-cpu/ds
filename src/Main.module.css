@@ -1,0 +1,118 @@
+.container {
+  background: radial-gradient(
+    97.98% 55.27% at 52.53% 43.57%,
+    #24695a 0%,
+    #17453b 100%
+  );
+  width: 100vw;
+  height: 100vh;
+  font-family: Raleway;
+  overflow-x: hidden;
+}
+.container p {
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.05000000074505806px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.img {
+  height: 27px;
+  width: 40px;
+}
+.imgW {
+  width: 90vw;
+  max-width: 336px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
+.circleNavImg {
+  width: 60px;
+}
+.garantCircleNav {
+  height: 27px;
+  width: 32px;
+}
+.circleNav {
+  border-radius: 50%;
+  background-color: white;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 29px;
+  text-align: center;
+  width: 67%;
+}
+.content p {
+  width: 63% !important;
+  padding-left: 18px;
+}
+.role button {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.05000000074505806px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  font-family: Raleway;
+  line-height: 18px;
+  text-underline-position: from-font;
+  background: linear-gradient(180deg, #c7b385 0%, #e0d0ab 100%);
+  border: none;
+  border-radius: 5px;
+  max-width: 155px;
+  width: 42vw;
+  height: 47px;
+  color: black;
+}
+.gridContainer {
+  display: grid; /* Включаем CSS Grid */
+  justify-content: end; /* Выравниваем элементы по правому краю */
+  padding-top: 10px;
+}
+.gridContainer button {
+  background: #173b33;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  width: 50px;
+  height: 39px;
+  font-family: Raleway;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.05000000074505806px;
+  /* text-align: left; */
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.role {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 108px;
+}
+.title {
+  padding-top: 10px;
+}
+.imageContainer {
+  padding-top: 10px;
+}
