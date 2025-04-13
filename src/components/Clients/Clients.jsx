@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Clients.module.css";
 import { useTranslation } from "react-i18next";
-import API_BASE_URL from "../../../src/api";
 
 import { useNavigate } from "react-router-dom";
 function Clients() {
@@ -53,29 +52,21 @@ function Clients() {
     // Формируем сообщение, включающее выбранные товары
 
     // Отправка данных на сервер
-    fetch(`${API_BASE_URL}/submit`, {
+    fetch("/api/submit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Origin: "https://bansys.ru.net",
       },
       body: JSON.stringify({
         isEmailOnly: true,
         email: userData.email,
       }),
     })
-      .then((response) => {
-        const contentType = response.headers.get("content-type");
-        if (!contentType || !contentType.includes("application/json")) {
-          throw new TypeError("Ответ сервера не в формате JSON");
-        }
-        return response.json();
-      })
+      .then((response) => response.json())
       .then((data) => {
         alert("Данные успешно отправлены");
         navigate("/");
       })
-
       .catch((error) => {
         console.error("Ошибка при отправке:", error);
         alert("Произошла ошибка при отправке");
