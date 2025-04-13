@@ -64,11 +64,18 @@ function Clients() {
         email: userData.email,
       }),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        const contentType = response.headers.get("content-type");
+        if (!contentType || !contentType.includes("application/json")) {
+          throw new TypeError("Ответ сервера не в формате JSON");
+        }
+        return response.json();
+      })
       .then((data) => {
         alert("Данные успешно отправлены");
         navigate("/");
       })
+
       .catch((error) => {
         console.error("Ошибка при отправке:", error);
         alert("Произошла ошибка при отправке");
