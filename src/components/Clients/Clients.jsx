@@ -52,10 +52,11 @@ function Clients() {
     // Формируем сообщение, включающее выбранные товары
 
     // Отправка данных на сервер
-    fetch("/api/submit", {
+    fetch(`${API_BASE_URL}/submit`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Origin: "https://bansys.ru.net",
       },
       body: JSON.stringify({
         isEmailOnly: true,
