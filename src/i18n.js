@@ -7,7 +7,7 @@ import ruTranslations from "./locales/ru.json";
 
 // const loadServerTranslations = async (lang) => {
 //   try {
-//     const response = await axios.get(`/api/translations/${lang}`);
+//     const response = await axios.get(`https://api.bansys.ru.net/api/translations/${lang}`);
 //     return response.data;
 //   } catch (error) {
 //     console.error(`Ошибка при загрузке переводов для ${lang}:`, error);

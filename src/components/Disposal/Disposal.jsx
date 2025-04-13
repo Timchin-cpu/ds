@@ -40,7 +40,9 @@ function Disposal() {
     // Запрос к серверу для получения данных пользователя
     const fetchUserData = async () => {
       try {
-        const response = await fetch(`/api/user/${tgUserId}`);
+        const response = await fetch(
+          `https://api.bansys.ru.net/api/user/${tgUserId}`
+        );
         const data = await response.json();
         console.log(data);
 
@@ -68,7 +70,7 @@ function Disposal() {
     const russianBrand = t("brand", { lng: "ru" });
 
     // Отправка данных на сервер
-    fetch("/api/submit", {
+    fetch("https://api.bansys.ru.net/api/submit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -167,7 +169,7 @@ function Disposal() {
       formData.append("file", newFile);
 
       try {
-        const response = await fetch("/api/upload", {
+        const response = await fetch("https://api.bansys.ru.net/api/upload", {
           method: "POST",
           body: formData,
         });

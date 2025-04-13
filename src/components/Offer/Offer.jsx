@@ -13,7 +13,7 @@ const Offer = () => {
 
   const [cardItems, setCardItems] = useState([]); // Изменяем на состояние
   useEffect(() => {
-    fetch("/api/products")
+    fetch("https://api.bansys.ru.net/api/products")
       .then((response) => response.json())
       .then((data) => {
         setCardItems(data);
