@@ -52,7 +52,7 @@ function Clients() {
     // Формируем сообщение, включающее выбранные товары
 
     // Отправка данных на сервер
-    fetch("/api/submit", {
+    fetch("https://api.bansys.ru.net/api/submit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
